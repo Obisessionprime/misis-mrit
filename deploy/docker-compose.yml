@@ -1,14 +1,14 @@
 services:
 
   application:
-    build: ./application
+    build: ../src
+    ports:
+      - "8000:8000"
 
   database:
-    build: ./datastorage
+    build: ../datastorage
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=11111111
-    volumes:
-      - ./db/:/docker-entrypoint-initdb.d/
     ports:
       - 5432:5432
