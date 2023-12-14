@@ -2,8 +2,10 @@ services:
 
   application:
     build: ../src
+    environment:
+      - ANSIBLE_RUNNER_API_PREFIX=dev
     ports:
-      - "8000:8000"
+      - 8000:8000
 
   database:
     build: ../datastorage
@@ -12,3 +14,8 @@ services:
       - POSTGRES_PASSWORD=11111111
     ports:
       - 5432:5432
+
+  cache:
+    image: redis
+    ports:
+      - 6379:6379

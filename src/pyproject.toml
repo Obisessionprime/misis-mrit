@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ansible_runner"
+authors = [
+    {name = "Anton Vigovskij", email = "aavigovskij@gmail.com"},
+]
+description = "Ansible runner project for MISIS"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["python", "ansible"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Ansible"
+]
+dependencies = [
+    "fastapi",
+    "ansible",
+    "uvicorn",
+    "asyncpg",
+    "aioredis",
+    "psycopg2-binary",
+    "sqlalchemy"
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+packages = [
+    "ansible_runner"
+]
