@@ -1,11 +1,11 @@
 # Database that stores PostgreSQL models for RBAC and sample data storage
 tasks_database:
-  hostname: 45.89.55.245
+  hostname: localhost
   username: postgres
   password: 11111111
   database: mrit
 
 # Database that stores sessions of running tasks, states and pids on runner hosts
 cache_database:
-  hostname: 45.89.55.245
+  hostname: localhost
   database: 0

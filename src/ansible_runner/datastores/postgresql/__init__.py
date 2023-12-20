@@ -33,9 +33,10 @@ class PostgreSQLRepository(SessionGetter):
             # Open new session if it wasn't presented as input parameter
             session = self.get_async_session()
 
-        records = await session.execute(select(metadata['model']).where(**filters))
+        records = list((await session.execute(select(metadata['model']).where(**filters))).scalars())
 
-        return records
+
+        return [task_record.__dict__ for task_record in records]
 
     async def create_record(self, objects: List):
         """

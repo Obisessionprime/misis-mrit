@@ -16,6 +16,6 @@ services:
       - 5432:5432
 
   cache:
-    image: redis
+    build: ../cache
     ports:
       - 6379:6379
