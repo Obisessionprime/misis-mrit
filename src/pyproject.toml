@@ -20,9 +20,9 @@ dependencies = [
     "ansible",
     "uvicorn",
     "asyncpg",
-    "aioredis",
+    "redis",
     "psycopg2-binary",
-    "sqlalchemy"
+    "sqlalchemy",
 ]
 dynamic = ["version"]
 

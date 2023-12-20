@@ -1,5 +1,0 @@
-tasks_database:
-  hostname: localhost
-  username: postgres
-  password: 11111111
-  database: mrit
