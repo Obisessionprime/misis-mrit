@@ -3,9 +3,10 @@ services:
   application:
     build: ../src
     environment:
-      - ANSIBLE_RUNNER_API_PREFIX=dev
+      - ANSIBLE_RUNNER_API_PREFIX=${ANSIBLE_RUNNER_API_PREFIX}
+      - ANSIBLE_RUNNER_CONFIG_PASS=${ANSIBLE_RUNNER_CONFIG_PASS}
     ports:
-      - 8000:8000
+      - ${ANSIBLE_RUNNER_OUTER_PORT}:${ANSIBLE_RUNNER_INNER_PORT}
 
   database:
     build: ../datastorage

@@ -1,11 +1,11 @@
 # Database that stores PostgreSQL models for RBAC and sample data storage
 tasks_database:
-  hostname: localhost
+  hostname: docker-database-1
   username: postgres
   password: 11111111
   database: mrit
 
 # Database that stores sessions of running tasks, states and pids on runner hosts
 cache_database:
-  hostname: localhost
+  hostname: docker-cache-1
   database: 0
