@@ -21,3 +21,8 @@ services:
     build: ../cache
     ports:
       - 6379:6379
+
+  frontend:
+    build: ../frontend
+    ports:
+      - 3000:3000
